@@ -26,3 +26,21 @@ export const footerData = {
     "SiteMaps",
   ],
 };
+
+export const teamSection = [
+  {
+    sn: 1,
+    image: "/team/moving.png",
+    desc: "Moving Techniques",
+  },
+  {
+    sn: 2,
+    image: "/team/safety.png",
+    desc: "Safety Protocols",
+  },
+  {
+    sn: 3,
+    image: "/team/customer.png",
+    desc: "Customer Service Standards",
+  },
+];

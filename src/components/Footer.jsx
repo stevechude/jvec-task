@@ -44,7 +44,9 @@ const Footer = () => {
             </p>
             <div className="flex flex-col items-center md:items-start gap-1">
               {footerData?.services?.moving?.map((dt, i) => (
-                <p key={i} className="text-[#FFFDFD]">{dt}</p>
+                <p key={i} className="text-[#FFFDFD]">
+                  {dt}
+                </p>
               ))}
             </div>
             <p className="text-[#6F7173] text-center md:text-start">
@@ -52,16 +54,22 @@ const Footer = () => {
             </p>
             <div className="flex flex-col items-center md:items-start gap-1">
               {footerData?.services?.specialty?.map((dt, i) => (
-                <p key={i} className="text-[#FFFDFD]">{dt}</p>
+                <p key={i} className="text-[#FFFDFD]">
+                  {dt}
+                </p>
               ))}
             </div>
           </div>
           {/* 3 */}
           <div className="flex flex-col gap-2">
-            <p className="text-[#FF3333] text-center md:text-start font-semibold">QUICK LINKS</p>
+            <p className="text-[#FF3333] text-center md:text-start font-semibold">
+              QUICK LINKS
+            </p>
             <div className="flex flex-col items-center md:items-start gap-1">
               {footerData?.quickLinks?.map((dt, i) => (
-                <p key={i} className="text-[#FFFDFD]">{dt}</p>
+                <p key={i} className="text-[#FFFDFD]">
+                  {dt}
+                </p>
               ))}
             </div>
           </div>
