@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer className="text-xs md:text-sm font-bold w-full bg-[#292D32] flex flex-col">
       <div className="lg:px-16 lg:py-6 md:p-4 p-2 overflow-y-auto">
-        <div className="flex flex-wrap justify-center md:justify-between gap-8 font-light">
+        <div className="flex flex-wrap flex-col md:flex-row justify-center md:justify-between gap-8 font-light">
           <div className="flex flex-col gap-5">
             <div className="flex flex-col gap-1 items-center md:items-start justify-center md:justify-start text-[#FFFDFD]">
               <Logo />
@@ -21,7 +21,7 @@ const Footer = () => {
                 </span>
                 <span>2024</span>
               </p>
-              <p className="w-full md:w-[198px]">
+              <p className="w-full text-center md:text-start md:w-[198px]">
                 JVEC Movers. All Rights Reserved.
               </p>
             </div>
@@ -44,7 +44,7 @@ const Footer = () => {
             </p>
             <div className="flex flex-col items-center md:items-start gap-1">
               {footerData?.services?.moving?.map((dt, i) => (
-                <p className="text-[#FFFDFD]">{dt}</p>
+                <p key={i} className="text-[#FFFDFD]">{dt}</p>
               ))}
             </div>
             <p className="text-[#6F7173] text-center md:text-start">
@@ -52,16 +52,16 @@ const Footer = () => {
             </p>
             <div className="flex flex-col items-center md:items-start gap-1">
               {footerData?.services?.specialty?.map((dt, i) => (
-                <p className="text-[#FFFDFD]">{dt}</p>
+                <p key={i} className="text-[#FFFDFD]">{dt}</p>
               ))}
             </div>
           </div>
           {/* 3 */}
           <div className="flex flex-col gap-2">
-            <p className="text-[#FF3333] font-semibold">QUICK LINKS</p>
+            <p className="text-[#FF3333] text-center md:text-start font-semibold">QUICK LINKS</p>
             <div className="flex flex-col items-center md:items-start gap-1">
               {footerData?.quickLinks?.map((dt, i) => (
-                <p className="text-[#FFFDFD]">{dt}</p>
+                <p key={i} className="text-[#FFFDFD]">{dt}</p>
               ))}
             </div>
           </div>
