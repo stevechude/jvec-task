@@ -4,7 +4,7 @@ const ChooseUs = () => {
   return (
     <section className='bg-[url("/whybg.png")] bg-no-repeat object-cover bg-cover md:w-full h-[52rem] md:h-[48rem] lg:h-[45rem]'>
       <div className="lg:px-16 lg:py-6 md:p-4 p-2">
-        <div className="flex flex-col lg:flex-row gap-4 md:gap-16 py-4 lg:py-16 lg:mt-8">
+        <div className="flex flex-col lg:flex-row justify-between gap-4 md:gap-16 py-4 lg:py-16 lg:mt-8">
           <div className="flex flex-col items-center lg:items-start gap-4">
             <div className="flex flex-col gap-3 text-center lg:text-start">
               <h1 className="lg:text-5xl md:text-3xl text-xl text-[#535558] font-bold">
@@ -30,7 +30,7 @@ const ChooseUs = () => {
           {/* 2 */}
           <div
             style={{ boxShadow: "0px 0px 5px 1px #ccc" }}
-            className="bg-white rounded-lg"
+            className="bg-white rounded-lg max-w-[650px] self-center"
           >
             <div className="p-2 md:p-4 lg:p-6 flex flex-col md:flex-row">
               <div className="flex flex-col gap-6 md:p-6 md:mt-10">

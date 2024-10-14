@@ -44,3 +44,30 @@ export const teamSection = [
     desc: "Customer Service Standards",
   },
 ];
+
+export const clientSection = [
+  {
+    sn: 1,
+    image: '/clients/home-owners.png',
+    title: 'Homeowners',
+    desc: 'Whether moving across town or to a new state, we help homeowners transition smoothly'
+  },
+  {
+    sn: 2,
+    image: '/clients/renters.png',
+    title: 'Renters',
+    desc: 'We assist renters with their moves, ensuring they leave their rental properties clean and in good condition.'
+  },
+  {
+    sn: 3,
+    image: '/clients/businesses.png',
+    title: 'Businesses',
+    desc: 'Our commercial moving services help businesses relocate with minimal disruption.'
+  },
+  {
+    sn: 4,
+    image: '/clients/property-mng.png',
+    title: 'Property Managers',
+    desc: 'We partner with property managers to offer seamless moving services for their tenants.'
+  }
+]
