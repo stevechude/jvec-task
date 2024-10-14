@@ -5,16 +5,20 @@ import Team from "../components/home/Team";
 import Represent from "../components/home/Represent";
 import Geographic from "../components/home/Geographic";
 import ClientsWeServe from "../components/home/ClientsWeServe";
+import Smooth from "../components/home/Smooth";
+import FreeQuote from "../components/home/FreeQuote";
 
 const Home = () => {
   return (
-    <div>
+    <div className="">
       <Hero />
       <ChooseUs />
       <Team />
       <Represent />
       <Geographic />
       <ClientsWeServe />
+      <Smooth />
+      <FreeQuote />
     </div>
   );
 };
