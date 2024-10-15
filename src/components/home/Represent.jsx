@@ -1,18 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Represent = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <section className="bg-[#EAEAEA] text-white">
       <div className="lg:px-24 lg:py-16 md:p-8 p-2 py-16 pb-64 max-w-[100vw]">
         <div className="relative">
           <img
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1000"
             src="/represent/represent.jpg"
             alt="What we rep"
             width={400}
             height={400}
             className="w-[20rem] md:w-[30rem] lg:w-[35rem]"
           />
-          <div className="bg-[#3B3B3B] max-w-[40rem] w-full md:w-[25rem] lg:w-full absolute top-40 md:top-8 md:right-0 md:bottom-0 lg:right-20 md:my-4">
+          <div
+            data-aos="fade-right"
+            data-aos-easing="linear"
+            data-aos-duration="1000"
+            className="bg-[#3B3B3B] max-w-[40rem] w-full md:w-[25rem] lg:w-full absolute top-40 md:top-8 md:right-0 md:bottom-0 lg:right-20 md:my-4">
             <div className="p-2 md:p-4 lg:p-8 py-6 flex flex-col items-center gap-2 lg:gap-4">
               <div className="flex flex-col items-center gap-1">
                 <p className="text-lg md:text-2xl lg:text-4xl font-semibold">

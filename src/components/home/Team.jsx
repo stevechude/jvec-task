@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { teamSection } from "../../lib/mock-data";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Team = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <section className="bg-black mt-6 md:mt-4">
       <div className="lg:px-16 lg:py-6 md:p-4 p-2 flex flex-col gap-5">
@@ -16,13 +22,17 @@ const Team = () => {
 
         <div className="flex flex-col md:flex-row justify-evenly items-center gap-3">
           {teamSection?.map((data) => (
-            <div key={data?.sn} className="flex flex-col gap-2">
+            <div key={data?.sn}
+              data-aos="fade-right"
+              data-aos-easing="linear"
+              data-aos-duration="1000"
+              className="flex flex-col gap-2">
               <img
                 src={data?.image}
                 alt={data?.desc}
                 width={200}
                 height={200}
-                className="md:w-[20rem] lg:w-[25rem]"
+                className="md:w-[20rem] lg:w-[25rem] transition-transform duration-300 transform hover:-translate-y-1"
               />
               <p className="text-white text-sm lg:text-base text-center">
                 {data?.desc}

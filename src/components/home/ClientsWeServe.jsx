@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { clientSection } from "../../lib/mock-data";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ClientsWeServe = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <section className="bg-white w-full">
       <div className="lg:px-16 lg:py-6 md:p-4 md:py-8 p-2 py-8">
@@ -16,6 +22,9 @@ const ClientsWeServe = () => {
           <div className="flex overflow-x-auto no-scrollbar gap-3 items-center lg:justify-center pt-6 w-full">
             {clientSection?.map((data) => (
               <div
+                data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1000"
                 key={data?.sn}
                 className="bg-[#F4F4F4] rounded-sm md:h-[16rem] lg:h-[15rem] max-w-[18rem] lg:w-[18rem] w-60"
               >
@@ -23,13 +32,13 @@ const ClientsWeServe = () => {
                   <p className="text-[#121212] font-semibold text-lg">
                     {data?.title}
                   </p>
-                  <div className="bg-[#EAEAEA] rounded-full p-2">
+                  <div className="bg-[#EAEAEA] hover:bg-white cursor-pointer rounded-full p-2">
                     <img
                       src={data?.image}
                       alt={data?.title}
                       width={50}
                       height={50}
-                      className="p-2 lg:w-[4rem] md:w-[3rem]"
+                      className="p-2 lg:w-[4rem] md:w-[3rem] hover:animate-spin transition duration-1000 ease-in-out"
                     />
                   </div>
                   <p className="pt-4 text-xs max-w-[15rem]">{data?.desc}</p>

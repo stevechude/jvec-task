@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { smoothSection } from "../../lib/mock-data";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Smooth = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <section className="bg-[#282B2E]">
       <div className="lg:px-16 lg:py-6 md:p-4 md:py-8 p-2 py-8">
@@ -23,6 +29,9 @@ const Smooth = () => {
           <div className="flex overflow-x-auto no-scrollbar gap-3 pt-2 items-center lg:justify-center w-full">
             {smoothSection?.map((data) => (
               <div
+                data-aos="fade-up"
+                data-aos-easing="linear"
+                data-aos-duration="1000"
                 key={data.sn}
                 className="flex flex-col items-start gap-1 border border-[#535558] rounded-sm"
               >
