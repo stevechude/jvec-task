@@ -24,7 +24,7 @@ const FreeQuote = () => {
               </span>
               <BsArrowRight size={25} />
             </p>
-            <div className="h-[1px] w-full md:w-72 lg:w-[30rem] bg-[#FF3333]" />
+            <div className="h-[1px] w-full md:w-[72%] lg:w-[30rem] bg-[#FF3333]" />
           </div>
         </div>
       </div>

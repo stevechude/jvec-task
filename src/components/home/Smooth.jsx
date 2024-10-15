@@ -3,48 +3,30 @@ import { smoothSection } from "../../lib/mock-data";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const Smooth = () => {
   useEffect(() => {
     AOS.init();
   }, []);
 
-  var settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 4,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
   };
 
   return (
@@ -64,10 +46,20 @@ const Smooth = () => {
               checklists, and more.
             </p>
           </div>
-          {/* carousel */}
-          {/* <div className="flex gap-3 pt-2 items-center lg:justify-center w-full"> */}
-          <div className="w-full mx-auto">
-            <Slider {...settings}>
+
+          <div>
+            <Carousel
+              swipeable={true}
+              draggable={true}
+              showDots={true}
+              responsive={responsive}
+              ssr={true}
+              infinite={true}
+              keyBoardControl={true}
+              containerClass="carousel-container-smooth"
+              dotListClass="custom-dot-list-style"
+              itemClass="carousel-item-padding"
+            >
               {smoothSection?.map((data) => (
                 <div
                   data-aos="fade-up"
@@ -81,7 +73,7 @@ const Smooth = () => {
                     alt="Packing Photo"
                     width={200}
                     height={50}
-                    className=" w-80 h-40 md:w-[40rem]"
+                    className="w-80 h-40 md:w-[40rem]"
                   />
                   <div className="p-2 flex flex-col gap-2">
                     <p className="font-light text-[#DEDEDE] text-sm lg:text-base">
@@ -96,9 +88,8 @@ const Smooth = () => {
                   </div>
                 </div>
               ))}
-            </Slider>
+            </Carousel>
           </div>
-          {/* </div> */}
         </div>
       </div>
     </section>
