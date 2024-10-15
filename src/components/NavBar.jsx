@@ -38,12 +38,12 @@ const NavBar = () => {
           <div className="block md:hidden">
             <TiThMenu onClick={toggleMenu} size={20} color="white" />
             {menu && (
-              <div className="bg-[#282B2E] text-white flex flex-col gap-2 w-[50%] absolute top-0 -right-1">
+              <div className="bg-[#282B2E] border border-white/90 rounded-lg text-white flex flex-col gap-2 w-[50%] absolute top-2 -right-1">
                 <MdOutlineRestaurantMenu
                   onClick={toggleMenu}
                   size={20}
                   color="#FF0000"
-                  className="self-end m-2"
+                  className="self-end m-1"
                 />
                 <div className="p-4 flex flex-col gap-2">
                   <p className="hover:text-white border-[#FF0000] border-b">

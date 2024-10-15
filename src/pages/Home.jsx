@@ -7,6 +7,8 @@ import Geographic from "../components/home/Geographic";
 import ClientsWeServe from "../components/home/ClientsWeServe";
 import Smooth from "../components/home/Smooth";
 import FreeQuote from "../components/home/FreeQuote";
+import Download from "../components/home/Download";
+import MoveClean from "../components/home/MoveClean";
 
 const Home = () => {
   return (
@@ -19,6 +21,8 @@ const Home = () => {
       <ClientsWeServe />
       <Smooth />
       <FreeQuote />
+      <Download />
+      <MoveClean />
     </div>
   );
 };
