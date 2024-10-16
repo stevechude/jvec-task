@@ -13,13 +13,13 @@ const FootIcon = ({ className }) => {
       <path
         d="M-82.0009 514.065C415.568 1190.41 1017.12 249.67 1502.22 582.619"
         stroke="#FF3333"
-        stroke-width="43"
+        strokeWidth="43"
       />
       <path
         d="M-82.0009 514.065C415.568 1190.41 1017.12 249.67 1502.22 582.619"
         stroke="#282B2E"
-        stroke-width="5"
-        stroke-dasharray="40 40"
+        strokeWidth="5"
+        strokeDasharray="40 40"
       />
     </svg>
   );

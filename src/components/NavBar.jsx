@@ -12,7 +12,7 @@ const NavBar = () => {
   };
 
   return (
-    <header className="font-bold bg-[#282B2E] text-[#9C9D9F] text-sm lg:text-base w-full relative">
+    <header className="font-bold bg-[#282B2E] text-[#9C9D9F] text-sm lg:text-base w-full fixed z-50">
       <div className="lg:px-16 lg:py-6 md:p-4 p-2 flex items-center justify-between">
         <div className="flex items-center gap-4 lg:gap-10">
           <Logo />
@@ -38,7 +38,7 @@ const NavBar = () => {
           <div className="block md:hidden">
             <TiThMenu onClick={toggleMenu} size={20} color="white" />
             {menu && (
-              <div className="bg-[#282B2E] border border-white/90 rounded-lg text-white flex flex-col gap-2 w-[50%] absolute top-2 -right-1">
+              <div className="bg-[#282B2E] border border-white/90 rounded-lg text-white flex flex-col gap-2 w-[50%] absolute top-2 right-1 z-10">
                 <MdOutlineRestaurantMenu
                   onClick={toggleMenu}
                   size={20}
